@@ -1,1 +1,11 @@
 @import 'tailwindcss';
+@import "tailwindcss-primeui";
+
+@theme {
+  --color-black-1: #161618ff;
+  --color-yellow-1: #c49551;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
