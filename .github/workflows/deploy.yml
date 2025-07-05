@@ -28,14 +28,12 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: |
-          cd hlmando_front
-          npm ci
+        working-directory: hlmando_front
+        run: npm ci
 
       - name: Build
-        run: |
-          cd hlmando_front
-          npm run build
+        working-directory: hlmando_front
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -43,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: hlmando_front/dist
+          path: dist
 
   deploy:
     environment:
