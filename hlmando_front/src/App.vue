@@ -1,7 +1,31 @@
 <template>
+  <Drawer
+    v-model:visible="visible"
+    header="Soloveva Group"
+    :pt="{
+      root: 'w-2/3 h-screen bg-white',
+      header: '!bg-white font-bold text-2xl !p-5 flex !justify-between',
+      content: 'bg-white',
+    }"
+  >
+    <div class="flex flex-col gap-4 w-full h-full bg-white items-center pt-5">
+      <a href="#about" class="text-2xl">О нас</a>
+      <a href="#services" class="text-2xl">Услуги</a>
+      <a href="#founder" class="text-2xl">Основатель</a>
+      <a href="#team" class="text-2xl">Команда</a>
+      <a href="#contacts" class="text-2xl">Контакты</a>
+    </div>
+  </Drawer>
+  <Transition name="fade">
+    <div v-if="visible" class="fixed inset-0 bg-black/40 z-40" @click="visible = false"></div>
+  </Transition>
   <div class="w-full h-24 bg-black-1 justify-between flex relative">
     <div class="flex lg:hidden items-center pr-4 absolute right-0 top-0 bottom-0">
-      <i class="pi pi-bars text-white" :style="{ fontSize: '2rem' }"></i>
+      <Button
+        icon="pi pi-bars"
+        :pt="{ root: 'text-white', icon: 'text-white big-icon' }"
+        @click="visible = true"
+      />
     </div>
     <Image
       :pt="{
@@ -83,7 +107,7 @@
       }"
     />
   </div>
-  <div class="flex lg:hidden relative">
+  <div class="flex lg:hidden relative" id="about">
     <Image src="full_command.jpg" alt="command" class="-mt-10 sm:-mt-100 -z-1" />
     <div class="absolute top-10 flex flex-col w-full px-10 pt-10">
       <h1 class="text-white text-2xl sm:text-4xl font-bold">Soloveva Group</h1>
@@ -97,30 +121,76 @@
   <div class="lg:hidden flex flex-col w-full bg-gray-100 items-center py-10">
     <h1 class="text-black text-3xl font-bold">Почему мы?</h1>
     <div class="flex flex-col gap-5 mt-10 px-5 w-full">
-      <div class="flex gap-2 bg-gray-200 py-5 rounded-2xl shadow-md items-center justify-center">
+      <div class="flex gap-2 bg-gray-200 py-5 rounded-2xl items-center justify-center">
         <h2 class="text-black text-3xl font-bold">20+</h2>
         <h3 class="text-black text-2xl">успешных кейсов</h3>
       </div>
-      <div class="flex bg-gray-200 rounded-2xl shadow-md items-center justify-center py-5">
+      <div class="flex bg-gray-200 rounded-2xl items-center justify-center py-5">
         <h1 class="text-black text-2xl text-center">
           Сотрудничество с передовыми сервисами и подрядчиками
         </h1>
       </div>
-      <div class="flex bg-gray-200 rounded-2xl shadow-md items-center justify-center py-5">
+      <div class="flex bg-gray-200 rounded-2xl items-center justify-center py-5">
         <h1 class="text-black text-2xl text-center">Инновационные решения в PR и продвижении</h1>
       </div>
-      <div class="flex bg-gray-200 rounded-2xl shadow-md items-center justify-center py-5">
+      <div class="flex bg-gray-200 rounded-2xl items-center justify-center py-5">
         <h1 class="text-black text-2xl text-center">Международный опыт</h1>
       </div>
-      <div class="flex bg-gray-200 rounded-2xl shadow-md items-center justify-center py-5">
+      <div class="flex bg-gray-200 rounded-2xl items-center justify-center py-5">
         <h1 class="text-black text-2xl text-center">Довольные клиенты</h1>
       </div>
-      <div class="flex bg-gray-200 rounded-2xl shadow-md items-center justify-center py-5">
+      <div class="flex bg-gray-200 rounded-2xl items-center justify-center py-5">
         <h1 class="text-black text-2xl text-center">Масштабируем бизнес</h1>
       </div>
     </div>
   </div>
-  <div class="lg:hidden overflow-x-auto snap-x py-10 w-screen">
+  <div class="lg:hidden">
+    <div class="grid grid-cols-2 gap-10 p-10 items-center justify-center">
+      <h1
+        class="text-black text-xl font-bold text-center border-2 border-gray-200 rounded-2xl p-5 shadow-md"
+        @click="handleDescIndex(0)"
+      >
+        Закупки
+      </h1>
+      <h1
+        class="text-black text-xl font-bold text-center border-2 border-gray-200 rounded-2xl p-5 shadow-md"
+        @click="handleDescIndex(1)"
+      >
+        Логистика
+      </h1>
+      <h1
+        class="text-black text-xl font-bold text-center border-2 border-gray-200 rounded-2xl p-[6px] sm:p-5 shadow-md"
+        @click="handleDescIndex(2)"
+      >
+        Продажи и маркетинг
+      </h1>
+      <h1
+        class="text-black text-xl font-bold text-center border-2 border-gray-200 rounded-2xl p-5 shadow-md"
+        @click="handleDescIndex(3)"
+      >
+        Финансы
+      </h1>
+    </div>
+    <div class="px-2">
+    <Transition
+      enter-from-class="opacity-0 -translate-y-10"
+      enter-active-class="transition duration-500 ease-out"
+      leave-from-class="opacity-100"
+      leave-active-class="transition duration-300 ease-in"
+      leave-to-class="opacity-0 -translate-y-10"
+      mode="out-in"
+    >
+      <DescriptionCardSmall
+        v-if="descIndex !== null"
+        :key="descIndex"
+        :title="descs[descIndex].title"
+        :description="descs[descIndex].description"
+        :icon="descs[descIndex].icon"
+      />
+    </Transition>
+  </div>
+  </div>
+  <div class="lg:hidden overflow-x-auto snap-x py-10 w-screen" id="services">
     <div class="inline-flex">
       <div v-for="item in descs" :key="item.title" class="snap-start sm:w-[95vw] w-[90vw] px-4">
         <DescriptionCardSmall
@@ -267,15 +337,15 @@
       других странах, участие в международных форумах и конференциях, спикер отраслевых мероприятий.
     </p>
     <a href="#consultation" class="lg:w-1/3 w-2/3 mt-10 lg:mt-20 items-center justify-center flex">
-    <Button
-      label="Заказать консультацию"
-      href="#consultation"
-      unstyled
-      :pt="{
-        root: 'lg:border-3 border-2 border-yellow-1 rounded-2xl lg:p-5 p-2 cursor-pointer hover:bg-gray-200 shadow-md font-bold',
-        label: 'text-black 2xl:text-4xl xl:text-2xl lg:text-xl text-base',
-      }"
-    />
+      <Button
+        label="Заказать консультацию"
+        href="#consultation"
+        unstyled
+        :pt="{
+          root: 'lg:border-3 border-2 border-yellow-1 rounded-2xl lg:p-5 p-2 cursor-pointer hover:bg-gray-200 shadow-md font-bold',
+          label: 'text-black 2xl:text-4xl xl:text-2xl lg:text-xl text-base',
+        }"
+      />
     </a>
   </div>
   <div id="team" class="flex flex-col w-full lg:py-20 lg:px-40 py-10">
@@ -295,7 +365,7 @@
     </p>
     <div class="overflow-x-auto lg:hidden w-screen">
       <div class="inline-flex gap-10 px-10 pt-10 pb-5 snap-x">
-        <div class="flex flex-col items-center w-[45vw] snap-center">
+        <div class="flex flex-col items-center w-[45vw] sm:w-[40vw] snap-center">
           <Image
             unstyled
             src="nastyaV.jpg"
@@ -307,7 +377,7 @@
           <h1 class="text-gray-600 text-xs text-center">Анастасия Вилисова</h1>
           <h2 class="text-gray-500 text-xs text-center">Финансы, Аудит, Налоги</h2>
         </div>
-        <div class="flex flex-col items-center w-[45vw]">
+        <div class="flex flex-col items-center w-[45vw] sm:w-[40vw] snap-center">
           <Image
             unstyled
             src="maria.jpg"
@@ -319,7 +389,7 @@
           <h1 class="text-gray-600 text-xs text-center">Мария Панченко</h1>
           <h2 class="text-gray-500 text-xs text-center">Закупка, Логистика, ВЭД</h2>
         </div>
-        <div class="flex flex-col items-center w-[45vw]">
+        <div class="flex flex-col items-center w-[45vw] sm:w-[40vw] snap-center">
           <Image
             unstyled
             src="nastyaSh.jpg"
@@ -383,20 +453,28 @@
     </div>
   </div>
   <div id="consultation" class="flex flex-col w-full bg-gray-100 lg:px-40 px-10 py-20">
-      <h1 class="text-gray-800 2xl:text-5xl sm:text-4xl text-3xl font-bold">
-        Заказать личную консультацию
-      </h1>
+    <h1 class="text-gray-800 2xl:text-5xl sm:text-4xl text-3xl font-bold">
+      Заказать личную консультацию
+    </h1>
     <form @submit.prevent="submitForm" class="flex flex-col gap-8 mt-15">
-      <div class="flex flex-col border-3 rounded-2xl 2xl:p-5 p-3 lg:w-2/5 sm:w-2/3 w-full border-yellow-1">
+      <div
+        class="flex flex-col border-3 rounded-2xl 2xl:p-5 p-3 lg:w-2/5 sm:w-2/3 w-full border-yellow-1"
+      >
         <InputText id="name" type="text" v-model="form.name" size="large" placeholder="Имя" />
       </div>
-      <div class="flex flex-col border-3 rounded-2xl 2xl:p-5 p-3 lg:w-2/5 sm:w-2/3 w-full border-yellow-1">
+      <div
+        class="flex flex-col border-3 rounded-2xl 2xl:p-5 p-3 lg:w-2/5 sm:w-2/3 w-full border-yellow-1"
+      >
         <InputText id="email" type="email" v-model="form.email" placeholder="E-mail" />
       </div>
-      <div class="flex flex-col border-3 rounded-2xl 2xl:p-5 p-3 lg:w-2/5 sm:w-2/3 w-full border-yellow-1">
+      <div
+        class="flex flex-col border-3 rounded-2xl 2xl:p-5 p-3 lg:w-2/5 sm:w-2/3 w-full border-yellow-1"
+      >
         <InputText id="company" type="text" v-model="form.company" placeholder="Компания" />
       </div>
-      <div class="flex flex-col border-3 rounded-2xl 2xl:p-5 p-3 lg:w-2/5 sm:w-2/3 w-full border-yellow-1">
+      <div
+        class="flex flex-col border-3 rounded-2xl 2xl:p-5 p-3 lg:w-2/5 sm:w-2/3 w-full border-yellow-1"
+      >
         <InputText id="comment" type="text" v-model="form.comment" placeholder="Комментарий" />
       </div>
       <Button
@@ -411,7 +489,9 @@
     </form>
   </div>
   <div id="contacts" class="w-full bg-black-1 h-150 relative">
-    <h1 class="text-white 2xl:text-5xl sm:text-4xl text-3xl font-bold lg:pl-40 pl-10 lg:pt-15 pt-5">Контакты</h1>
+    <h1 class="text-white 2xl:text-5xl sm:text-4xl text-3xl font-bold lg:pl-40 pl-10 lg:pt-15 pt-5">
+      Контакты
+    </h1>
     <div class="w-full absolute bottom-20 flex justify-center">
       <div class="bg-yellow-1 w-1/8 h-1"></div>
     </div>
@@ -425,6 +505,7 @@ import { ref } from 'vue'
 import DescriptionCard from './components/DescriptionCard.vue'
 import DescriptionCardSmall from './components/DescriptionCardSmall.vue'
 import InputText from 'primevue/inputtext'
+import Drawer from 'primevue/drawer'
 
 const form = ref({
   name: '',
@@ -443,6 +524,8 @@ const handleDescIndex = (index: number) => {
   descIndex.value = index
   console.log(descIndex.value)
 }
+
+const visible = ref(false)
 
 const descs = [
   {
