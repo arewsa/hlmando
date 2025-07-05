@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tailwindcss-primeui";
+@import 'tailwindcss-primeui';
 
 @theme {
   --color-black-1: #161618ff;
@@ -7,5 +7,30 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.icon-responsive {
+  font-size: 3rem !important;
+}
+@media (min-width: 1280px) {
+  .icon-responsive {
+    font-size: 6rem !important;
   }
+}
+@media (min-width: 1536px) {
+  .icon-responsive {
+    font-size: 8rem !important;
+  }
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-cygre {
+  font-family: 'Cygre';
+  src: url('/fonts/Cygre-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
