@@ -3,7 +3,7 @@
 
 @theme {
   --color-black-1: #161618ff;
-  --color-yellow-1: #c49551;
+  --color-yellow-1: #C49551;
 }
 
 html {
@@ -35,8 +35,6 @@ html {
 .font-cygre {
   font-family: 'Cygre';
   src: url('/fonts/Cygre-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
 }
 
 .fade-enter-active, .fade-leave-active {
