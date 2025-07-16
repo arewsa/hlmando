@@ -1,13 +1,25 @@
 <template>
-  <div class="flex lg:hidden relative h-screen" id="about">
+  <div class="flex flex-col lg:hidden relative" id="about">
     <Image src="full_command.jpg" alt="command" class="-mt-10 sm:-mt-110 -z-1" />
-    <div class="absolute top-10 flex flex-col w-full px-10 pt-10">
-      <h1 class="text-white text-2xl sm:text-4xl font-bold">Soloveva Group</h1>
-      <h2 class="text-white text-lg sm:text-2xl pt-5 leading-5 sm:leading-6">
+    <div class="absolute flex flex-col w-full px-[25px] pt-[20px]">
+      <h1 class="text-white text-[36px] sm:text-4xl font-bold">Soloveva Group</h1>
+      <h2 class="text-white text-[16px] sm:text-2xl pt-[24px] leading-5 sm:leading-6">
         Soloveva Group – это группа компаний, решающих разные бизнес-задачи в отрасли торговли
-        автокомпонентами. Мы сопровождаем бизнес-клиентов от стратегического планирования до полного
+        автокомпонентами.
+      </h2>
+      <h2 class="text-white text-[16px] sm:text-2xl pt-[24px] leading-5 sm:leading-6">
+        Мы сопровождаем бизнес-клиентов от стратегического планирования до полного
         операционного аутсорса в закупках, ВЭД, логистике, продажах, маркетинге и финансах.
       </h2>
+    </div>
+    <div class="px-[25px] flex flex-col pt-[60px]">
+      <h1 class="text-[#333333] text-[32px]">Почему мы?</h1>
+      <div class="w-[200px] h-[200px] border-[2px] border-[#777777] rounded-[10px] mt-[42px] items-center justify-center">
+        <div class="flex flex-col">
+          <h1 class="text-center text-[91px]">20</h1>
+          <h2 class="text-center text-[13px]">успешных кейсов</h2>
+        </div>
+      </div>
     </div>
   </div>
   <div id="about" class="hidden lg:flex w-full px-20 2xl:px-40 bg-gray-100 items-center">

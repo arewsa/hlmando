@@ -1,25 +1,28 @@
 <template>
   <div class="hidden lg:block w-[1440px] mx-auto">
-  <Header />
-  <HeroSection />
-  <AboutSection />
-  <ServicesSection :descs="descs" :descIndex="descIndex" :handleDescIndex="handleDescIndex" />
-  <FounderSection />
-  <TeamSection />
-  <ConsultationSection />
-  <ContactsSection />
+    <Header />
+    <HeroSection />
+    <AboutSection />
+    <ServicesSection :descs="descs" :descIndex="descIndex" :handleDescIndex="handleDescIndex" />
+    <FounderSection />
+    <TeamSection />
+    <ConsultationSection />
+    <ContactsSection />
   </div>
-  <div class="lg:hidden">
+  <div class="lg:hidden flex flex-col">
     <div class="h-screen flex flex-col">
       <Header />
       <HeroSection />
     </div>
-  <AboutSection />
-  <ServicesSection :descs="descs" :descIndex="descIndex" :handleDescIndex="handleDescIndex" />
-  <FounderSection />
-  <TeamSection />
-  <ConsultationSection />
-  <ContactsSection />
+    <div class="flex flex-col">
+      <div class="bg-[#070506] h-[30px] w-full"></div>
+      <AboutSection />
+    </div>
+    <ServicesSection :descs="descs" :descIndex="descIndex" :handleDescIndex="handleDescIndex" />
+    <FounderSection />
+    <TeamSection />
+    <ConsultationSection />
+    <ContactsSection />
   </div>
 </template>
 
@@ -34,14 +37,12 @@ import ConsultationSection from './components/ConsultationSection.vue'
 import ContactsSection from './components/ContactsSection.vue'
 import { ref } from 'vue'
 
-
 const descIndex = ref(0)
 
 const handleDescIndex = (index: number) => {
   descIndex.value = index
   console.log(descIndex.value)
 }
-
 
 const descs = [
   {
