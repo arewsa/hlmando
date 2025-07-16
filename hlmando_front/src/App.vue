@@ -10,8 +10,10 @@
   <ContactsSection />
   </div>
   <div class="lg:hidden">
-  <Header />
-  <HeroSection />
+    <div class="h-screen flex flex-col">
+      <Header />
+      <HeroSection />
+    </div>
   <AboutSection />
   <ServicesSection :descs="descs" :descIndex="descIndex" :handleDescIndex="handleDescIndex" />
   <FounderSection />
