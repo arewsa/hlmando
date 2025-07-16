@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col lg:hidden relative" id="about">
+  <div id="about" class="flex flex-col lg:hidden relative">
     <Image src="full_command.jpg" alt="command" class="-mt-10 sm:-mt-110 -z-1" />
-    <div class="absolute flex flex-col w-full px-[25px] pt-[20px]">
+    <div class="absolute flex flex-col w-full px-[25px] pt-[30px]">
       <h1 class="text-white text-[36px] sm:text-4xl font-bold">Soloveva Group</h1>
       <h2 class="text-white text-[16px] sm:text-2xl pt-[24px] leading-5 sm:leading-6">
         Soloveva Group – это группа компаний, решающих разные бизнес-задачи в отрасли торговли
@@ -12,7 +12,7 @@
         аутсорса в закупках, ВЭД, логистике, продажах, маркетинге и финансах.
       </h2>
     </div>
-    <div class="bg-[#F2F4F7] pb-[60px]"> 
+    <div class="bg-[#F2F4F7] pb-[60px]">
       <div class="px-[25px] flex flex-col pt-[60px] w-5/6">
         <h1 class="text-[#333333] text-[32px] font-[600]">Почему мы?</h1>
         <div
@@ -63,7 +63,7 @@
       </div>
     </div>
   </div>
-  <div id="about" class="hidden lg:flex w-full px-20 2xl:px-40 bg-gray-100 items-center">
+  <div class="hidden lg:flex w-full px-20 2xl:px-40 bg-gray-100 items-center">
     <div class="w-1/2 pr-5">
       <h1 class="text-black font-bold mb-5 xl:mb-10 2xl:mb-20 text-3xl xl:text-5xl">
         Soloveva Group

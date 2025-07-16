@@ -1,6 +1,6 @@
 <template>
-  <div class="lg:hidden">    
-    <div class="overflow-x-auto snap-x py-10 w-screen" id="services">
+  <div id="services" class="lg:hidden">
+    <div class="overflow-x-auto snap-x py-10 w-screen">
       <div class="inline-flex">
         <div v-for="item in descs" :key="item.title" class="snap-start sm:w-[95vw] w-[90vw] px-4">
           <DescriptionCardSmall

@@ -1,21 +1,11 @@
 <template>
-  <div class="hidden lg:block w-[1440px] mx-auto">
-    <Header />
-    <HeroSection />
-    <AboutSection />
-    <ServicesSection :descs="descs" :descIndex="descIndex" :handleDescIndex="handleDescIndex" />
-    <FounderSection />
-    <TeamSection />
-    <ConsultationSection />
-    <ContactsSection />
-  </div>
+  
   <div class="lg:hidden flex flex-col">
     <div class="h-screen flex flex-col">
       <Header />
       <HeroSection />
     </div>
     <div class="flex flex-col">
-      <div class="bg-[#070506] h-[30px] w-full"></div>
       <AboutSection />
     </div>
     <ServicesSection :descs="descs" :descIndex="descIndex" :handleDescIndex="handleDescIndex" />
