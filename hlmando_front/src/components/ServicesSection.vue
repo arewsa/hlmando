@@ -1,49 +1,5 @@
 <template>
-  <div class="lg:hidden">
-    <div class="grid grid-cols-2 gap-10 p-10 items-center justify-center">
-      <h1
-        class="text-black text-xl font-bold text-center border-2 border-gray-200 rounded-2xl p-5 shadow-md"
-        @click="handleDescIndex(0)"
-      >
-        Закупки
-      </h1>
-      <h1
-        class="text-black text-xl font-bold text-center border-2 border-gray-200 rounded-2xl p-5 shadow-md"
-        @click="handleDescIndex(1)"
-      >
-        Логистика
-      </h1>
-      <h1
-        class="text-black text-xl font-bold text-center border-2 border-gray-200 rounded-2xl p-[6px] sm:p-5 shadow-md"
-        @click="handleDescIndex(2)"
-      >
-        Продажи и маркетинг
-      </h1>
-      <h1
-        class="text-black text-xl font-bold text-center border-2 border-gray-200 rounded-2xl p-5 shadow-md"
-        @click="handleDescIndex(3)"
-      >
-        Финансы
-      </h1>
-    </div>
-    <div class="px-2">
-      <Transition
-        enter-from-class="opacity-0 -translate-y-10"
-        enter-active-class="transition duration-500 ease-out"
-        leave-from-class="opacity-100"
-        leave-active-class="transition duration-300 ease-in"
-        leave-to-class="opacity-0 -translate-y-10"
-        mode="out-in"
-      >
-        <DescriptionCardSmall
-          v-if="descIndex !== null"
-          :key="descIndex"
-          :title="descs[descIndex].title"
-          :description="descs[descIndex].description"
-          :icon="descs[descIndex].icon"
-        />
-      </Transition>
-    </div>
+  <div class="lg:hidden">    
     <div class="overflow-x-auto snap-x py-10 w-screen" id="services">
       <div class="inline-flex">
         <div v-for="item in descs" :key="item.title" class="snap-start sm:w-[95vw] w-[90vw] px-4">

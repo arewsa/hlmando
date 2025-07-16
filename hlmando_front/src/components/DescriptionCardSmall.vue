@@ -1,8 +1,8 @@
 <template>
-    <div class="border-2 border-gray-300 rounded-2xl py-5 px-2 flex flex-col gap-5 items-center justify-center h-full">
-      <div class="flex flex-col items-center justify-center">
-        <i :class="icon" class="icon-responsive" style="margin-bottom: 1rem"></i>
-        <h1 class="text-black text-xl sm:text-2xl text-center">{{ title }}</h1>
+    <div class="border-2 border-gray-300 rounded-2xl px-2 py-10 flex flex-col gap-5 h-full">
+      <div class="ml-4 w-[100px] flex flex-col items-center justify-center">
+        <Image :src="icon" alt="icon"/>
+        <h1 class="text-[#0F1D40] text-[18px] font-[500] text-center">{{ title }}</h1>
       </div>
       <div class="flex flex-col gap-2 w-full">
         <div v-for="item in description" :key="item" class="pb-2 px-4 flex items-center gap-2">
@@ -14,6 +14,8 @@
   </template>
   
   <script setup lang="ts">
+  import Image from 'primevue/image'
+
   defineProps<{
     title: string
     description: string[]

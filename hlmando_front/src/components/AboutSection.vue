@@ -8,42 +8,56 @@
         автокомпонентами.
       </h2>
       <h2 class="text-white text-[16px] sm:text-2xl pt-[24px] leading-5 sm:leading-6">
-        Мы сопровождаем бизнес-клиентов от стратегического планирования до полного
-        операционного аутсорса в закупках, ВЭД, логистике, продажах, маркетинге и финансах.
+        Мы сопровождаем бизнес-клиентов от стратегического планирования до полного операционного
+        аутсорса в закупках, ВЭД, логистике, продажах, маркетинге и финансах.
       </h2>
     </div>
-    <div class="px-[25px] flex flex-col pt-[60px] w-5/6">
-      <h1 class="text-[#333333] text-[32px] font-[600]">Почему мы?</h1>
-      <div class="w-[200px] h-[200px] border-[2px] border-[#777777] rounded-[10px] custom-shadow mt-[42px] place-items-center relative">
-        <h1 class="absolute top-6 left-6 text-[#777777] font-[500] text-[19px]">Более</h1>
-        <div class="flex flex-col h-full w-full pl-[10px] pt-[50px]">
-          <h1 class="text-center text-[91px] text-[#777777] leading-none font-[700] p-0">20</h1>
-          <h2 class="text-center text-[13px] text-[#777777] font-[500]">успешных кейсов</h2>
-        </div>
-      </div>
-      <div class="flex flex-col mt-[38px] gap-[54px]">
-        <div class="flex flex-col gap-[54px]">
-          <div class="flex flex-col gap-[10px]">
-            <h1 class="text-[#333333] text-[16px] font-[600]">Сильные партнёрства</h1>
-            <p class="text-[#333333] text-[16px] font-[400]">Работаем с лучшими подрядчиками в логистике, маркетинге и IT</p>
-          </div>
-          <div class="flex flex-col gap-[10px]">
-            <h1 class="text-[#333333] text-[16px] font-[600]">Международный охват</h1>
-            <p class="text-[#333333] text-[16px] font-[400]">Запуски в Европе, Азии, СНГ. Сопровождение ВЭД и локализация</p>
-          </div>
-          <div class="flex flex-col gap-[10px]">
-            <h1 class="text-[#333333] text-[16px] font-[600]">Нас рекомендуют</h1>
-            <p class="text-[#333333] text-[16px] font-[400]">Большинство клиентов приходят по сарафанному радио</p>
+    <div class="bg-[#F2F4F7] pb-[60px]"> 
+      <div class="px-[25px] flex flex-col pt-[60px] w-5/6">
+        <h1 class="text-[#333333] text-[32px] font-[600]">Почему мы?</h1>
+        <div
+          class="w-[200px] h-[200px] border-[2px] border-[#777777] rounded-[10px] custom-shadow mt-[42px] place-items-center relative"
+        >
+          <h1 class="absolute top-6 left-6 text-[#777777] font-[500] text-[19px]">Более</h1>
+          <div class="flex flex-col h-full w-full pl-[10px] pt-[50px]">
+            <h1 class="text-center text-[91px] text-[#777777] leading-none font-[700] p-0">20</h1>
+            <h2 class="text-center text-[13px] text-[#777777] font-[500]">успешных кейсов</h2>
           </div>
         </div>
-        <div class="flex flex-col gap-[54px]">
-          <div class="flex flex-col gap-[10px]">
-            <h1 class="text-[#333333] text-[16px] font-[600]">Растим бизнес клиентов</h1>
-            <p class="text-[#333333] text-[16px] font-[400]">Помогаем расти: от пилота до федерального уровня</p>
+        <div class="flex flex-col mt-[38px] gap-[54px]">
+          <div class="flex flex-col gap-[54px]">
+            <div class="flex flex-col gap-[10px]">
+              <h1 class="text-[#333333] text-[16px] font-[600]">Сильные партнёрства</h1>
+              <p class="text-[#333333] text-[16px] font-[400]">
+                Работаем с лучшими подрядчиками в логистике, маркетинге и IT
+              </p>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <h1 class="text-[#333333] text-[16px] font-[600]">Международный охват</h1>
+              <p class="text-[#333333] text-[16px] font-[400]">
+                Запуски в Европе, Азии, СНГ. Сопровождение ВЭД и локализация
+              </p>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <h1 class="text-[#333333] text-[16px] font-[600]">Нас рекомендуют</h1>
+              <p class="text-[#333333] text-[16px] font-[400]">
+                Большинство клиентов приходят по сарафанному радио
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-[10px]">
-            <h1 class="text-[#333333] text-[16px] font-[600]">Современный PR и digital</h1>
-            <p class="text-[#333333] text-[16px] font-[400]">Эффективный PR, продвижение в отраслевых и digital-медиа</p>
+          <div class="flex flex-col gap-[54px]">
+            <div class="flex flex-col gap-[10px]">
+              <h1 class="text-[#333333] text-[16px] font-[600]">Растим бизнес клиентов</h1>
+              <p class="text-[#333333] text-[16px] font-[400]">
+                Помогаем расти: от пилота до федерального уровня
+              </p>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <h1 class="text-[#333333] text-[16px] font-[600]">Современный PR и digital</h1>
+              <p class="text-[#333333] text-[16px] font-[400]">
+                Эффективный PR, продвижение в отраслевых и digital-медиа
+              </p>
+            </div>
           </div>
         </div>
       </div>

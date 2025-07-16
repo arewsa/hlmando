@@ -53,7 +53,7 @@ const descs = [
       'Контрактное производство в РФ',
       'Языковое сопровождение бизнес кейса',
     ],
-    icon: 'pi pi-cart-arrow-down',
+    icon: 'Procurement.png',
   },
   {
     title: 'Логистика',
@@ -64,7 +64,7 @@ const descs = [
       'Международная транспортная логистика',
       'Подбор и анализ складских 3PL услуг',
     ],
-    icon: 'pi pi-truck',
+    icon: 'Logistics.png',
   },
   {
     title: 'Продажи и маркетинг',
@@ -77,12 +77,12 @@ const descs = [
       'Реклама и продвижение в ведущих отраслевых СМИ',
       'Продвижение в сети',
     ],
-    icon: 'pi pi-percentage',
+    icon: 'Sales.png',
   },
   {
     title: 'Финансы',
     description: ['Финансовая логистика', 'Аудит', 'Бухгалтерская поддержка'],
-    icon: 'pi pi-bitcoin',
+    icon: 'Finance.png',
   },
 ]
 </script>
