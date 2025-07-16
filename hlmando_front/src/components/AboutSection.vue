@@ -16,8 +16,8 @@
       <h1 class="text-[#333333] text-[32px]">Почему мы?</h1>
       <div class="w-[200px] h-[200px] border-[2px] border-[#777777] rounded-[10px] mt-[42px] items-center justify-center">
         <div class="flex flex-col">
-          <h1 class="text-center text-[91px]">20</h1>
-          <h2 class="text-center text-[13px]">успешных кейсов</h2>
+          <h1 class="text-center text-[91px] text-[#777777]">20</h1>
+          <h2 class="text-center text-[13px] text-[#777777]">успешных кейсов</h2>
         </div>
       </div>
     </div>

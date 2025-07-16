@@ -12,7 +12,7 @@
       <h1 class="text-white text-[40px] leading-11 sm:text-6xl font-bold font-cygre">Экспертиза —</h1>
       <h1 class="text-white text-[40px] leading-11 sm:text-6xl font-bold font-cygre">не в словах,</h1>
       <h1 class="text-white text-[40px] leading-11 sm:text-6xl font-bold font-cygre">а в действиях</h1>
-      <div class="bg-yellow-1 w-10 sm:w-12 h-0.75 mt-3"></div>
+      <div class="bg-yellow-1 w-10 sm:w-12 h-[6px] mt-[50px]"></div>
     </div>
     <div class="h-1/2 relative overflow-hidden">
     <Image
@@ -20,7 +20,7 @@
       src="LION_White.svg"
       alt="Logo"
       :pt="{
-        root: 'rotate-y-180 absolute opacity-25 h-110 -right-20 -bottom-20',
+        root: 'rotate-y-180 absolute opacity-25 h-full -right-13 -bottom-10',
         image: 'h-full sm:w-auto w-full',
       }"
     />
