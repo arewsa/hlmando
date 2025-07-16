@@ -46,3 +46,7 @@ html {
 .fade-enter-to, .fade-leave-from {
   opacity: 1;
 }
+
+.custom-shadow {
+  box-shadow: 0 4px 0 0 #C4955140;
+}
