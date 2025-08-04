@@ -1,5 +1,6 @@
 <template>
   <div id="services" class="lg:hidden">
+    <h1 class="text-[#0F1D40] text-[26px] font-bold px-4 pt-10">Консалтинг</h1>
     <div class="overflow-x-auto snap-x py-10 w-screen">
       <div class="inline-flex">
         <div v-for="item in descs" :key="item.title" class="snap-start sm:w-[95vw] w-[90vw] px-4">

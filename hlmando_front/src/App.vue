@@ -1,5 +1,4 @@
 <template>
-  
   <div class="lg:hidden flex flex-col">
     <div class="h-screen flex flex-col">
       <Header />
