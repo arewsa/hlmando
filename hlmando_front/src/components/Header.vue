@@ -20,7 +20,7 @@
   <Transition name="fade">
     <div v-if="visible" class="fixed inset-0 bg-black/40 z-40" @click="visible = false"></div>
   </Transition>
-  <div class="w-full h-[100px] bg-black-1 justify-between flex relative lg:px-30">
+  <div class="w-full h-[100px] bg-black-1 justify-between flex relative lg:px-[120px]">
     <div class="flex lg:hidden items-center pr-8 absolute right-0 top-0 bottom-0">
       <Button
         icon="pi pi-bars"
@@ -30,18 +30,17 @@
     </div>
     <Image
       :pt="{
-        root: 'flex w-full h-full pl-8 py-4',
+        root: 'flex w-full h-full py-[20px] pl-8 lg:pl-0',
       }"
       src="LOGO_White.svg"
       alt="Logo"
     />
-    <div class="xl:gap-21 gap-6 mr-20 hidden lg:flex whitespace-nowrap">
+    <div class="xl:gap-20 lg:gap-10 hidden lg:flex whitespace-nowrap items-center">
       <a href="#about">
         <Button
           label="О нас"
           :pt="{
-            root: 'mx-4 my-8',
-            label: 'text-white font-bold text-xl hover:text-gray-400',
+            label: 'text-white text-[16px] hover:text-gray-400',
           }"
         />
       </a>
@@ -49,8 +48,7 @@
         <Button
           label="Услуги"
           :pt="{
-            root: 'mx-4 my-8',
-            label: 'text-white font-bold text-xl hover:text-gray-400',
+            label: 'text-white text-[16px] hover:text-gray-400',
           }"
         />
       </a>
@@ -58,8 +56,7 @@
         <Button
           label="Основатель"
           :pt="{
-            root: 'mx-4 my-8 ',
-            label: 'text-white font-bold text-xl hover:text-gray-400',
+            label: 'text-white text-[16px] hover:text-gray-400',
           }"
         />
       </a>
@@ -67,8 +64,7 @@
         <Button
           label="Команда"
           :pt="{
-            root: 'mx-4 my-8 ',
-            label: 'text-white font-bold text-xl hover:text-gray-400',
+            label: 'text-white text-[16px] hover:text-gray-400',
           }"
         />
       </a>
@@ -76,8 +72,7 @@
         <Button
           label="Контакты"
           :pt="{
-            root: 'mx-4 my-8 ',
-            label: 'text-white font-bold text-xl hover:text-gray-400',
+            label: 'text-white text-[16px] hover:text-gray-400',
           }"
         />
       </a>

@@ -47,6 +47,10 @@ html {
   opacity: 1;
 }
 
-.custom-shadow {
+.custom-shadow-mobile {
   box-shadow: 0 4px 0 0 #C4955140;
+}
+
+.custom-shadow {
+  box-shadow: 0 4px 0 rgba(196, 149, 81, 0.25) ;
 }

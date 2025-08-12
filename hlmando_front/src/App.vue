@@ -1,6 +1,6 @@
 <template>
-  <div class="lg:hidden flex flex-col">
-    <div class="h-screen flex flex-col">
+  <div class="flex flex-col">
+    <div class="h-screen lg:h-auto flex flex-col">
       <Header />
       <HeroSection />
     </div>
@@ -30,7 +30,6 @@ const descIndex = ref(0)
 
 const handleDescIndex = (index: number) => {
   descIndex.value = index
-  console.log(descIndex.value)
 }
 
 const descs = [

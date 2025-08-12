@@ -1,5 +1,5 @@
 <template>
-  <div id="team" class="flex flex-col w-full pl-[35px]">
+  <div id="team" class="flex flex-col w-full pl-[35px] lg:px-[140px]">
     <h1 class="text-[26px] text-[#0F1D40] font-[700] pt-[50px] pr-[45px]">Наша команда</h1>
     <p class="text-[16px] text-[#333333] font-[400] pt-[30px] pr-[45px]">
       Мы – это команда профессионалов с обширным опытом запуска разнообразных проектов в области

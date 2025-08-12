@@ -16,7 +16,7 @@
       <div class="px-[25px] flex flex-col pt-[60px] w-5/6">
         <h1 class="text-[#333333] text-[32px] font-[600]">Почему мы?</h1>
         <div
-          class="w-[200px] h-[200px] border-[2px] border-[#777777] rounded-[10px] custom-shadow mt-[42px] place-items-center relative"
+          class="w-[200px] h-[200px] border-[2px] border-[#777777] rounded-[10px] custom-shadow-mobile mt-[42px] place-items-center relative"
         >
           <h1 class="absolute top-6 left-6 text-[#777777] font-[500] text-[19px]">Более</h1>
           <div class="flex flex-col h-full w-full pl-[10px] pt-[50px]">
@@ -63,62 +63,91 @@
       </div>
     </div>
   </div>
-  <div class="hidden lg:flex w-full px-20 2xl:px-40 bg-gray-100 items-center">
-    <div class="w-1/2 pr-5">
-      <h1 class="text-black font-bold mb-5 xl:mb-10 2xl:mb-20 text-3xl xl:text-5xl">
-        Soloveva Group
-      </h1>
-      <p class="text-black 2xl:text-2xl xl:text-xl text-base">
-        Soloveva Group – это группа компаний, решающих разные бизнес-задачи в отрасли торговли
-        автокомпонентами. Мы сопровождаем бизнес-клиентов от стратегического планирования до полного
-        операционного аутсорса в закупках, ВЭД, логистике, продажах, маркетинге и финансах.
-      </p>
-      <h2 class="text-black xl:text-3xl text-2xl font-bold mt-5 xl:mt-10 2xl:mt-15">Почему мы?</h2>
-      <div class="flex flex-wrap gap-5 mt-5 2xl:mt-10">
-        <div
-          class="bg-gray-200 rounded-2xl shadow-md w-full md:w-1/5 flex flex-col justify-center items-center"
-        >
-          <h3 class="text-black 2xl:text-5xl xl:text-3xl text-xl w-full px-3">20+</h3>
-          <h3 class="text-black 2xl:text-2xl xl:text-base text-sm w-full px-3">успешных кейсов</h3>
-        </div>
-        <div
-          class="bg-gray-200 p-5 rounded-2xl shadow-md w-full md:w-1/3 flex items-center justify-center"
-        >
-          <h3 class="text-black 2xl:text-2xl xl:text-base text-sm">
-            Сотрудничество с передовыми сервисами и подрядчиками
-          </h3>
-        </div>
-        <div
-          class="bg-gray-200 p-5 rounded-2xl shadow-md w-full md:w-1/3 flex items-center justify-center"
-        >
-          <h3 class="text-black 2xl:text-2xl xl:text-base text-sm">
-            Инновационные решения в PR и продвижении
-          </h3>
-        </div>
-        <div
-          class="bg-gray-200 rounded-2xl shadow-md w-full md:w-1/3 p-3 flex items-center justify-center"
-        >
-          <h3 class="text-black 2xl:text-2xl xl:text-base text-sm">Международный опыт</h3>
-        </div>
-        <div
-          class="bg-gray-200 p-5 rounded-2xl shadow-md w-full md:w-1/5 flex items-center justify-center"
-        >
-          <h3 class="text-black 2xl:text-2xl xl:text-base text-sm">Довольные клиенты</h3>
-        </div>
-        <div
-          class="bg-gray-200 p-5 rounded-2xl shadow-md w-full md:w-1/3 flex items-center justify-center"
-        >
-          <h3 class="text-black 2xl:text-2xl xl:text-base text-sm">Масштабируем бизнес</h3>
+  <div class="hidden lg:flex w-full px-[120px] bg-gray-100 flex-col">
+    <div class="flex justify-between">
+      <div class="w-1/2 pr-[25px]">
+        <h1 class="text-[#0F1D40] font-[700] text-[28px] mt-[100px]">Soloveva Group</h1>
+        <p class="text-[#333333] text-[18px]/7 mt-[30px]">
+          Soloveva Group — это группа компаний, объединённых одной целью: помогать бизнесу в сфере
+          автокомпонентов расти быстрее, работать эффективнее и выходить на новые рынки.
+        </p>
+        <p class="text-[#333333] text-[18px]/7 mt-[20px]">
+          Мы сопровождаем клиентов на всех этапах: от стратегического планирования и аналитики до
+          полного операционного аутсорса — в закупках, ВЭД, логистике, продажах, маркетинге и
+          финансах.
+        </p>
+        <p class="text-[#333333] text-[18px]/7 mt-[20px]">
+          Работаем с производителями, дистрибьюторами и сетевыми ритейлерами. Наш опыт — десятки
+          успешных запусков брендов и проектов, как в России, так и за рубежом.
+        </p>
+        <a href="#services">
+          <Button
+            class="w-[395px] border-[#C49551] border-[2px] custom-shadow h-[70px] rounded-xl mt-[70px] cursor-pointer"
+          >
+            <p class="text-[#0F1D40] text-[20px] font-[700]">Посмотреть направления</p>
+          </Button>
+        </a>
+      </div>
+      <Image
+        src="command.jpg"
+        alt="About Us"
+        :pt="{
+          root: 'w-[550px]',
+        }"
+      />
+    </div>
+    <div class="bg-[#F2F4F7] mb-[100px]">
+      <div class="flex flex-col mt-[50px] w-full">
+        <h1 class="text-[#0F1D40] text-[26px] font-[700]">Почему мы?</h1>
+        <div class="flex gap-[90px] mt-[60px]">
+          <div
+            class="w-[300px] h-[300px] border-[3px] border-[#777777] rounded-[12px] custom-shadow-mobile place-items-center relative"
+          >
+            <h1 class="absolute top-[30px] left-[40px] text-[#777777] text-[30px]">Более</h1>
+            <div class="flex flex-col h-full w-full pl-[40px] pt-[78px]">
+              <h1 class="text-center text-[140px] text-[#777777] leading-none font-[700]">20</h1>
+              <h2 class="text-center text-[20px] text-[#777777] font-[500]">успешных кейсов</h2>
+            </div>
+          </div>
+          <div class="grid grid-row-2 gap-[70px] items-center">
+            <div class="flex gap-[60px]">
+              <div class="flex flex-col gap-[10px] w-[233px]">
+                <h1 class="text-[#333333] text-[16px] font-[600]">Сильные партнёрства</h1>
+                <p class="text-[#333333] text-[16px] font-[400]">
+                  Работаем с лучшими подрядчиками в логистике, маркетинге и IT
+                </p>
+              </div>
+              <div class="flex flex-col gap-[10px] w-[233px]">
+                <h1 class="text-[#333333] text-[16px] font-[600]">Международный охват</h1>
+                <p class="text-[#333333] text-[16px] font-[400]">
+                  Запуски в Европе, Азии, СНГ. Сопровождение ВЭД и локализация
+                </p>
+              </div>
+              <div class="flex flex-col gap-[10px] w-[233px]">
+                <h1 class="text-[#333333] text-[16px] font-[600]">Нас рекомендуют</h1>
+                <p class="text-[#333333] text-[16px] font-[400]">
+                  Большинство клиентов приходят по сарафанному радио
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-[60px]">
+              <div class="flex flex-col gap-[10px] w-[233px]">
+                <h1 class="text-[#333333] text-[16px] font-[600]">Растим бизнес клиентов</h1>
+                <p class="text-[#333333] text-[16px] font-[400]">
+                  Помогаем расти: от пилота до федерального уровня
+                </p>
+              </div>
+              <div class="flex flex-col gap-[10px] w-[233px]">
+                <h1 class="text-[#333333] text-[16px] font-[600]">Современный PR и digital</h1>
+                <p class="text-[#333333] text-[16px] font-[400]">
+                  Эффективный PR, продвижение в отраслевых и digital-медиа
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <Image
-      src="command.jpg"
-      alt="About Us"
-      :pt="{
-        root: 'w-1/2',
-      }"
-    />
   </div>
 </template>
 
