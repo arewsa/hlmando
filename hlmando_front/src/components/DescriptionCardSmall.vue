@@ -7,7 +7,7 @@
     <div class="flex flex-col gap-2 w-full">
       <div v-for="item in description" :key="item" class="pb-2 px-4 flex items-center gap-2">
         <i class="pi pi-circle pr-2" style="font-size: 0.5rem"></i>
-        <p class="text-black text-sm sm:text-base font-[600]">{{ item }}</p>
+        <p class="text-black text-sm sm:text-base font-[400]">{{ item }}</p>
       </div>
     </div>
   </div>

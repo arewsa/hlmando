@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex mt-20 border-2 border-gray-300 rounded-2xl py-[40px]">
-    <div class="flex flex-col ml-[40px] mr-[60px]">
+    <div class="flex flex-col ml-[20px] mr-[60px]">
       <Image :src="icon" alt="icon" :pt="{ image: 'w-[80px] h-[80px]' }" />
       <p class="text-[#0F1D40] text-[18px] text-center mt-[20px]">{{ title }}</p>
       <div class="bg-yellow-1 w-full h-1 mt-[5px]"></div>

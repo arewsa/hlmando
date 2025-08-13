@@ -21,7 +21,7 @@
           v-for="(item, idx) in descs"
           :key="item.title"
           @click="handleDescIndex(idx)"
-          class="bg-[#F2F4F7] hover:bg-[#E2E6ED] pl-[40px] rounded-xl shadow-md aspect-square w-[270px] flex flex-col py-[45px] justify-between cursor-pointer"
+          class="bg-[#F2F4F7] hover:bg-[#E2E6ED] pl-[20px] rounded-xl shadow-md aspect-square w-[270px] flex flex-col py-[45px] justify-between cursor-pointer"
         >
           <Image
             :src="item.icon"
